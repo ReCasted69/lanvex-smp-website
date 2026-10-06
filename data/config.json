@@ -107,9 +107,8 @@
       "subtitle": "Built to be fair, fast, and fun",
       "items": [
         { "value": 100, "suffix": "%", "label": "Anti Pay-to-Win" },
-        { "value": 3, "suffix": "", "label": "Dimensions to Explore" },
-        { "value": 2, "suffix": "", "label": "Editions — Java & Bedrock" },
-        { "value": 5, "suffix": "+", "label": "Core Community Rules" }
+        { "value": 100, "suffix": "%", "label": "Anti Pay-to-Win" },
+        { "value": 10000, "suffix": "+", "label": "Lines Of  Code" }
       ]
     },
     {
