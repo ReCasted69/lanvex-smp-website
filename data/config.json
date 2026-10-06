@@ -3,7 +3,7 @@
   "site": {
     "name": "LANVEX",
     "tagline": "Community Minecraft Server",
-    "serverIp": "play.lancsmp.ru",
+    "serverIp": "mc.lancsmp.ru",
     "logo": {
       "sm": "https://public.lancsmp.ru/images/lx+bg.png",
       "big": "https://public.lancsmp.ru/images/lanvex_smp_logo.png",
@@ -16,7 +16,7 @@
     "discordUrl": "https://discord.lancsmp.ru/",
     "supportUrl": "https://ko-fi.com/lancasters_studios",
     "ownerEmail": "golovanov.dmitrii@outlook.com",
-    "copyright": "{year} Lancasters Studios & SMP. All Rights Reserved. Not associated with Mojang or Microsoft."
+    "copyright": "{year} LANVEX Studios & SMP. All Rights Reserved. Not associated with Mojang or Microsoft."
   },
 
   "theme": {
@@ -53,10 +53,10 @@
 
   "status": {
     "endpoint": "https://api.mcstatus.io/v2/status/java/{ip}",
-    "ip": "play.lancsmp.ru",
+    "ip": "mc.lancsmp.ru",
     "refreshSeconds": 60,
     "showPlayers": true,
-    "showVersion": false
+    "showVersion": true
   },
 
   "sections": [
@@ -66,7 +66,7 @@
       "nav": true,
       "navLabel": "Home",
       "showLogo": true,
-      "title": "<gradient:red:blue>LANVEX</gradient>",
+      "title": "<gradient:red:purple>LANVEX</gradient>",
       "rotator": [
         "<gradient:red:blue>Community-Focused Minecraft • Anti Pay-to-Win</gradient>",
         "<gradient:accent:red>Custom Skript Plugins</gradient>",
@@ -74,8 +74,8 @@
         "<gradient:red:purple>Friendly Community • Regular Updates</gradient>"
       ],
       "body": [
-        "Lancasters SMP (often referred to as <blue>LancSMP</blue>) is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.",
-        "One of the unique parts of LancSMP is its heavy use of the <accent>Skript</accent> language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <accent>Skript</accent>."
+        "<gradient:red:purple>LANVEX</gradient> SMP is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.",
+        "One of the unique parts of <gradient:red:purple>LANVEX</gradient> is its heavy use of the <accent>Skript</accent> language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <accent>Skript</accent>."
       ],
       "buttons": [
         { "label": "Join the Server", "icon": "arrow-right", "style": "primary", "action": "#join" },
@@ -116,7 +116,7 @@
       "type": "about",
       "nav": true,
       "navLabel": "About",
-      "title": "About <blue>LancSMP</blue>",
+      "title": "About <gradient:red:purple>LANVEX</gradient>",
       "subtitle": "Everything you need to know",
       "items": [
         { "icon": "server", "title": "Server", "desc": "Powerful hardware, fast internet, and a Skript-powered backend delivering a smooth, lag-free experience for everyone." },
