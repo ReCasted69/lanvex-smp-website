@@ -7,6 +7,9 @@
 
   if (!mobileMenuBtn || !mobileMenu || !navbar) return;
 
+  const mobileMenuClose = mobileMenu.querySelector('.mobile-menu-close');
+  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMenu);
+
   function openMenu() {
     mobileMenu.classList.add('open');
     mobileMenuBtn.classList.add('open');
@@ -37,10 +40,10 @@
     mobileMenuBackdrop.addEventListener('click', closeMenu);
   }
 
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      closeMenu();
-    });
+  // Delegated: close the menu whenever any link inside it is clicked
+  // (links are rendered dynamically after config loads).
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target.closest('a')) closeMenu();
   });
 
   document.addEventListener('keydown', function(e) {

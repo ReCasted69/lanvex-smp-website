@@ -1,139 +1,183 @@
 {
+  "$comment": "LANVEX SMP — site configuration. Edit this file to change content, layout, theme, SEO and server-status. Sections are rendered in the order listed below.",
   "site": {
-    "title": "LANVEX SMP — Home",
     "name": "LANVEX",
-    "favicon": "https://public.lancsmp.ru/images/lx.png",
-    "ogImage": "https://public.lancsmp.ru/images/lanvex_smp%2Bbg.png",
-    "description": "<gradient:red:blue>Community-Focused Minecraft • Anti Pay-to-Win<reset>",
-    "heroRotator": [
-      "<gradient:red:blue>Community-Focused Minecraft • Anti Pay-to-Win<reset>",
-      "<gradient:gold:red>Custom Skript Plugins<reset>",
-      "<gradient:blue:gold>100% Fair — No Pay-to-Win<reset>",
-      "<gradient:red:purple>Friendly Community • Regular Updates<reset>"
-    ],
-    "bodyText1": "LANVEX SMP is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.",
-    "bodyText2": "One of the unique parts of LANVEX SMP is its heavy use of the Skript language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <gold>Skript<reset> .",
-    "serverIp": "mc.lancsmp.ru",
+    "tagline": "Community Minecraft Server",
+    "serverIp": "play.lancsmp.ru",
+    "logo": {
+      "sm": "https://public.lancsmp.ru/images/lx.png",
+      "big": "https://public.lancsmp.ru/images/lanvex_smp_logo.png",
+      "favicon": "https://public.lancsmp.ru/images/lx+bg.png"
+    },
+    "background": {
+      "image": "https://public.lancsmp.ru/images/BG_4.png",
+      "overlay": "rgba(10, 13, 24, 0.72)"
+    },
     "discordUrl": "https://discord.lancsmp.ru/",
     "supportUrl": "https://ko-fi.com/lancasters_studios",
     "ownerEmail": "golovanov.dmitrii@outlook.com",
-    "copyright": "2026 LANVEX Studios & SMP. All Rights Reserved. NOT ASSOCIATED WITH MOJANG OR MICROSOFT",
-    "logoSm": "https://public.lancsmp.ru/images/lx+bg.png",
-    "logoBig": "https://public.lancsmp.ru/images/lanvex_smp_logo.png",
-    "bgImage": "https://public.lancsmp.ru/images/BG_4.png",
-    "bgVersion": 2
+    "copyright": "{year} Lancasters Studios & SMP. All Rights Reserved. Not associated with Mojang or Microsoft."
   },
-  "colors": {
-    "primary": "#3A6FFF",
-    "primaryHover": "#2b5fef",
-    "accent": "#B255D5",
-    "accentHover": "#9E3FB8",
-    "bgDark": "#0a0d18",
-    "bgCard": "#141826",
-    "bgNav": "#0f121e"
+
+  "theme": {
+    "colors": {
+      "primary": "#3A6FFF",
+      "primaryHover": "#2b5fef",
+      "accent": "#B255D5",
+      "accentHover": "#9E3FB8",
+      "bgDark": "#0a0d18",
+      "bgCard": "#141826",
+      "bgNav": "#0f121e",
+      "text": "#ffffff",
+      "muted": "rgba(255, 255, 255, 0.65)"
+    },
+    "fonts": {
+      "body": "'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif",
+      "heading": "'Montserrat', ui-sans-serif, system-ui, sans-serif"
+    },
+    "radii": {
+      "card": "1rem",
+      "pill": "999px"
+    },
+    "motion": true
   },
-  "features": [
+
+  "seo": {
+    "title": "LANVEX — Home",
+    "description": "Community-Focused Minecraft server. Anti Pay-to-Win. Custom Skript plugins, friendly community, and powerful hardware.",
+    "canonical": "https://www.lancsmp.ru/",
+    "image": "https://public.lancsmp.ru/images/lanvex_smp%2Bbg.png",
+    "locale": "en_US",
+    "twitterCard": "summary_large_image"
+  },
+
+  "status": {
+    "endpoint": "https://api.mcstatus.io/v2/status/java/{ip}",
+    "ip": "play.lancsmp.ru",
+    "refreshSeconds": 60,
+    "showPlayers": true,
+    "showVersion": false
+  },
+
+  "sections": [
     {
-      "title": "Custom Gameplay Experience",
-      "desc": "All your favorite SMP mechanics enhanced with unique <gold>Skript<reset> plugins.",
-      "icon": "sparkles"
+      "id": "home",
+      "type": "hero",
+      "nav": true,
+      "navLabel": "Home",
+      "showLogo": true,
+      "title": "<gradient:red:blue>LANVEX</gradient>",
+      "rotator": [
+        "<gradient:red:blue>Community-Focused Minecraft • Anti Pay-to-Win</gradient>",
+        "<gradient:accent:red>Custom Skript Plugins</gradient>",
+        "<gradient:blue:accent>100% Fair — No Pay-to-Win</gradient>",
+        "<gradient:red:purple>Friendly Community • Regular Updates</gradient>"
+      ],
+      "body": [
+        "Lancasters SMP (often referred to as <blue>LancSMP</blue>) is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.",
+        "One of the unique parts of LancSMP is its heavy use of the <accent>Skript</accent> language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <accent>Skript</accent>."
+      ],
+      "buttons": [
+        { "label": "Join the Server", "icon": "arrow-right", "style": "primary", "action": "#join" },
+        { "label": "Join Discord", "icon": "message-circle", "style": "glass", "href": "https://discord.lancsmp.ru/" }
+      ]
     },
     {
-      "title": "Unique Skript Plugins",
-      "desc": "Special features like custom items, abilities, and events.",
-      "icon": "wrench"
+      "id": "features",
+      "type": "features",
+      "nav": true,
+      "navLabel": "Features",
+      "title": "Server <blue>Features</blue>",
+      "subtitle": "Everything that makes LancSMP special",
+      "columns": 3,
+      "items": [
+        { "icon": "sparkles", "title": "Custom Gameplay Experience", "desc": "All your favorite SMP mechanics enhanced with unique <accent>Skript</accent> plugins." },
+        { "icon": "wrench", "title": "Unique Skript Plugins", "desc": "Special features like custom items, abilities, and events." },
+        { "icon": "users", "title": "Community Focused", "desc": "Friendly environment with teamwork, trading, and community projects." },
+        { "icon": "package", "title": "Player Tools & Utilities", "desc": "Custom commands to make gameplay smoother and more fun." },
+        { "icon": "rocket", "title": "Regular Updates", "desc": "New features and plugins added continuously to keep the server fresh." },
+        { "icon": "shield", "title": "Safe & Stable", "desc": "Optimized Skript setup for smooth performance and minimal lag." }
+      ]
     },
     {
-      "title": "Community Focused",
-      "desc": "Friendly environment with teamwork, trading, and community projects.",
-      "icon": "users"
+      "id": "stats",
+      "type": "stats",
+      "nav": false,
+      "title": "LANVEX in numbers",
+      "subtitle": "Built to be fair, fast, and fun",
+      "items": [
+        { "value": 100, "suffix": "%", "label": "Anti Pay-to-Win" },
+        { "value": 3, "suffix": "", "label": "Dimensions to Explore" },
+        { "value": 2, "suffix": "", "label": "Editions — Java & Bedrock" },
+        { "value": 5, "suffix": "+", "label": "Core Community Rules" }
+      ]
     },
     {
-      "title": "Player Tools & Utilities",
-      "desc": "Custom commands to make gameplay smoother and more fun.",
-      "icon": "package"
+      "id": "about",
+      "type": "about",
+      "nav": true,
+      "navLabel": "About",
+      "title": "About <blue>LancSMP</blue>",
+      "subtitle": "Everything you need to know",
+      "items": [
+        { "icon": "server", "title": "Server", "desc": "Powerful hardware, fast internet, and a Skript-powered backend delivering a smooth, lag-free experience for everyone." },
+        { "icon": "scroll", "title": "Rules", "desc": "A fair, respectful community. No griefing, no cheats, no spam — full rules available on our Discord server." },
+        { "icon": "activity", "title": "Status", "desc": "The server is online and stable. Jump in anytime at <strong>play.lancsmp.ru</strong> on Java or Bedrock edition." },
+        { "icon": "hammer", "title": "Tools", "desc": "Custom commands and player utilities designed to streamline your gameplay and make every session more fun." },
+        { "icon": "map", "title": "Map", "desc": "Explore a vast world filled with player-made builds across multiple dimensions. More exploration tools coming soon." }
+      ],
+      "rules": {
+        "title": "Server Rules",
+        "items": [
+          "Be respectful and kind to everyone",
+          "No cheats, hacks, or exploits",
+          "No spamming or advertising",
+          "No toxic behavior or harassment",
+          "Keep the community friendly and fun"
+        ]
+      }
     },
     {
-      "title": "Regular Updates",
-      "desc": "New features and plugins added continuously to keep the server fresh.",
-      "icon": "zap"
+      "id": "join",
+      "type": "join",
+      "nav": true,
+      "navLabel": "Join",
+      "title": "How to <blue>Join</blue>",
+      "subtitle": "Get started in 4 simple steps",
+      "ipCopy": true,
+      "steps": [
+        { "icon": "package", "title": "Get Minecraft", "desc": "You'll need official Minecraft Java edition or Bedrock edition." },
+        { "icon": "message-circle", "title": "Join Discord", "desc": "You can join discord here to stay connected with the community.", "link": "https://discord.lancsmp.ru/", "linkLabel": "Join Discord" },
+        { "icon": "server", "title": "Join the Server", "desc": "Add the server using the IP below in Minecraft." },
+        { "icon": "circle-help", "title": "Any Questions?", "desc": "That's it! Check our FAQ if you need any help getting started." }
+      ]
     },
     {
-      "title": "Safe & Stable",
-      "desc": "Optimized Skript setup for smooth performance and minimal lag.",
-      "icon": "zap"
-    }
-  ],
-  "about": [
-    {
-      "title": "Rules",
-      "desc": "A fair, respectful community. No cheats, no spam — full rules available on our Discord server",
-      "icon": "scroll"
+      "id": "faq",
+      "type": "faq",
+      "nav": true,
+      "navLabel": "FAQ",
+      "title": "Frequently Asked <blue>Questions</blue>",
+      "subtitle": "Got questions? We've got answers",
+      "items": [
+        { "question": "What versions of Minecraft are supported?", "answer": "We support the latest version of Minecraft Java Edition as well as Bedrock Edition. You can connect using the IP <strong>play.lancsmp.ru</strong>." },
+        { "question": "Is the server pay-to-win?", "answer": "Absolutely not! Our core principle is to provide a fair, balanced experience for all players. We don't sell power-ups, advantages, or anything that breaks game balance." },
+        { "question": "What is Skript?", "answer": "Skript is a plugin that lets you create custom Minecraft features using simple scripts. It powers many of our server's unique mechanics, and in the future you'll even be able to use it to create your own worlds and minigames!" },
+        { "question": "How do I report a player or issue?", "answer": "Join our Discord server and use the support channels to report any issues or rule-breaking behavior. Our staff team will review and handle it promptly." },
+        { "question": "Can I create my own world or minigame?", "answer": "Yes! This is one of our upcoming features. Players will soon be able to create their own worlds and build custom minigames using <accent>Skript</accent>, playing together with friends in their own unique spaces." }
+      ]
     },
     {
-      "title": "Status",
-      "desc": "The server is online and stable. Jump in anytime at play.lancsmp.ru on Java or Bedrock edition.",
-      "icon": "activity"
-    },
-    {
-      "title": "Tools",
-      "desc": "Custom commands and player utilities designed to streamline your gameplay and make every session more fun.",
-      "icon": "hammer"
-    }
-  ],
-  "rules": [
-    "Be respectful and kind to everyone",
-    "No cheats, hacks, or exploits",
-    "No spamming or advertising",
-    "No toxic behavior or harassment",
-    "Keep the community friendly and fun"
-  ],
-  "join": [
-    {
-      "title": "Get Minecraft",
-      "desc": "You'll need official Minecraft Java edition or Bedrock edition.",
-      "icon": "package",
-      "link": null
-    },
-    {
-      "title": "Join Discord",
-      "desc": "You can join discord here to stay connected with the community.",
-      "icon": "message-circle",
-      "link": "https://discord.lancsmp.ru/"
-    },
-    {
-      "title": "Join the Server",
-      "desc": "Add the server using the IP below in Minecraft.",
-      "icon": "server",
-      "link": null
-    },
-    {
-      "title": "Any Questions?",
-      "desc": "That's it! Check our FAQ if you need any help getting started.",
-      "icon": "circle-help",
-      "link": null
-    }
-  ],
-  "faq": [
-    {
-      "question": "What versions of Minecraft are supported?",
-      "answer": "We support the latest version of Minecraft Java Edition as well as Bedrock Edition. You can connect using the IP play.lancsmp.ru."
-    },
-    {
-      "question": "Is the server pay-to-win?",
-      "answer": "Absolutely not! Our core principle is to provide a fair, balanced experience for all players. We don't sell power-ups, advantages, or anything that breaks game balance."
-    },
-    {
-      "question": "What is Skript?",
-      "answer": "Skript is a plugin that lets you create custom Minecraft features using simple scripts. It powers many of our server's unique mechanics, and in the future you'll even be able to use it to create your own worlds and minigames!"
-    },
-    {
-      "question": "How do I report a player or issue?",
-      "answer": "Join our Discord server and use the support channels to report any issues or rule-breaking behavior. Our staff team will review and handle it promptly."
-    },
-    {
-      "question": "Can I create my own world or minigame?",
-      "answer": "Yes! This is one of our upcoming features. Players will soon be able to create their own worlds and build custom minigames using <gold>Skript<reset> , playing together with friends in their own unique spaces."
+      "id": "cta",
+      "type": "cta",
+      "nav": false,
+      "title": "Ready to <blue>start your adventure?</blue>",
+      "desc": "Join a fair, friendly community powered by custom Skript plugins. The server is waiting for you.",
+      "buttons": [
+        { "label": "Join the Server", "icon": "arrow-right", "style": "primary", "action": "#join" },
+        { "label": "Join Discord", "icon": "message-circle", "style": "glass", "href": "https://discord.lancsmp.ru/" },
+        { "label": "Support Us", "icon": "heart", "style": "glass", "href": "https://ko-fi.com/lancasters_studios" }
+      ]
     }
   ]
 }

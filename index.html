@@ -33,52 +33,40 @@
       "@type": "Organization",
       "name": "Lancasters Studios",
       "url": "https://www.lancsmp.ru/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://public.lancsmp.ru/images/lx.png"
-      }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.lancsmp.ru/#home",
-      "query-input": "required name=search_term_string"
+      "logo": { "@type": "ImageObject", "url": "https://public.lancsmp.ru/images/lx.png" }
     }
   }
   </script>
-  <link rel="icon" type="image/png" href="https://public.lancsmp.ru/images/lx.png">
+  <link rel="icon" type="image/png" href="https://public.lancsmp.ru/images/lx+bg.png">
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <title>LANVEX — Home</title>
-  <link rel="stylesheet" href="public/css/style.css?v=38">
+  <link rel="stylesheet" href="public/css/style.css?v=2">
 </head>
 <body class="home">
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- Background -->
   <div class="bg-fixed">
-    <img src="https://public.lancsmp.ru/images/BG_4.png" alt="" class="bg-image" width="1024" height="576" fetchpriority="high" decoding="async">
-    <div class="bg-overlay"></div>
+    <img src="https://public.lancsmp.ru/images/BG_4.png" alt="" class="bg-image" data-bg-image width="1024" height="576" fetchpriority="high" decoding="async">
+    <div class="bg-overlay" data-bg-overlay></div>
   </div>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">
-        <img src="https://public.lancsmp.ru/images/lx.png" alt="LANVEX" class="nav-logo-img" width="36" height="36" decoding="async">
-        <span class="nav-logo-text">LANVEX</span>
+        <img src="https://public.lancsmp.ru/images/lx.png" alt="" class="nav-logo-img" data-nav-logo width="36" height="36" decoding="async">
+        <span class="nav-logo-text" data-nav-name>LANVEX</span>
       </a>
       <div class="nav-links">
-        <div class="nav-blob" id="navBlob"></div>
         <div id="navPrimary">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#features" class="nav-link">Features</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#join" class="nav-link">Join</a>
-          <a href="#faq" class="nav-link">FAQ</a>
+          <div class="nav-blob" id="navBlob"></div>
+          <div id="navLinksInner"></div>
         </div>
-        <a href="https://ko-fi.com/lancasters_studios" target="_blank" rel="noopener noreferrer" class="nav-btn-support">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="nav-btn-support" data-support-link>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
           Support us!
         </a>
@@ -92,27 +80,23 @@
       </button>
     </div>
   </nav>
+
   <!-- Mobile Menu Backdrop -->
   <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
       <a href="#home" class="nav-logo">
-        <img src="https://public.lancsmp.ru/images/lx.png" alt="LANVEX" class="nav-logo-img" width="36" height="36" decoding="async">
-        <span class="nav-logo-text">LANVEX</span>
+        <img src="https://public.lancsmp.ru/images/lx.png" alt="" class="nav-logo-img" data-nav-logo width="36" height="36" decoding="async">
+        <span class="nav-logo-text" data-nav-name>LANVEX</span>
       </a>
-      <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open');document.getElementById('mobileMenuBtn').classList.remove('open');document.getElementById('mobileMenuBackdrop').classList.remove('open');document.body.style.overflow='';" aria-label="Close menu">
+      <button class="mobile-menu-close" aria-label="Close menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <div id="mobileNavPrimary">
-      <a href="#home" class="mobile-link">Home</a>
-      <a href="#features" class="mobile-link">Features</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="#join" class="mobile-link">Join</a>
-      <a href="#faq" class="mobile-link">FAQ</a>
-    </div>
-    <a href="https://ko-fi.com/lancasters_studios" target="_blank" rel="noopener noreferrer" class="mobile-support-btn">
+    <div id="mobileNavPrimary"></div>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="mobile-support-btn" data-support-link>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
       Support us!
     </a>
@@ -122,323 +106,90 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <div class="page page-enter">
+  <!-- Sections are rendered here from data/config.json -->
+  <main id="page" class="page page-enter"></main>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <div class="hero-logo-wrap">
-          <div class="hero-logo-pill">
-            <img src="https://public.lancsmp.ru/images/lanvex_smp_logo.png" alt="LANVEX Logo" class="hero-logo" width="1024" height="252" fetchpriority="high" decoding="async">
+  <!-- Static fallback for crawlers / no-JS visitors -->
+  <noscript>
+    <main class="page">
+      <section id="home" class="section hero">
+        <div class="hero-content">
+          <h1 class="hero-title">LANVEX</h1>
+          <p class="hero-subtitle">Community-Focused Minecraft &bull; Anti Pay-to-Win</p>
+          <div class="hero-card glass-card">
+            <p class="hero-desc">Lancasters SMP (LancSMP) is a community-focused Minecraft server built to fight against pay-to-win gameplay, powered by custom Skript plugins.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#join">Join the Server</a>
+            <a class="btn btn-glass" href="https://discord.lancsmp.ru/" target="_blank" rel="noopener noreferrer">Join Discord</a>
           </div>
         </div>
-        <h1 class="hero-title"><span class="gradient-text">LANVEX</span></h1>
-        <p class="hero-subtitle">Community-Focused Minecraft • Anti Pay-to-Win</p>
-        <div class="hero-card glass-card">
-          <p class="hero-desc">
-            Lancasters SMP (often referred to as <span class="text-blue font-semibold">LancSMP</span>) is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.
-          </p>
-          <p class="hero-desc">
-            One of the unique parts of LancSMP is its heavy use of the <span class="text-gold font-semibold">Skript</span> language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <span class="text-gold font-semibold">Skript</span>.
-          </p>
+      </section>
+      <section id="join" class="section">
+        <div class="section-inner section-inner-narrow">
+          <div class="section-header"><h2 class="section-title">How to Join</h2></div>
+          <p>Connect using the IP <strong>play.lancsmp.ru</strong> on Java or Bedrock edition.</p>
         </div>
-        <div class="hero-actions">
-          <button class="btn btn-primary" onclick="joinServer()">
-            Join the Server
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
-          <a href="https://discord.lancsmp.ru/" target="_blank" rel="noopener noreferrer" class="btn btn-glass">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-            Join Discord
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="section">
-      <div class="section-inner">
-        <div class="section-header">
-          <h2 class="section-title">Server <span class="text-blue">Features</span></h2>
-          <p class="section-desc">Everything that makes LancSMP special</p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card glass-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
-            </div>
-            <h3 class="feature-title">Custom Gameplay Experience</h3>
-            <p class="feature-desc">All your favorite SMP mechanics enhanced with unique Skript plugins.</p>
-          </div>
-          <div class="feature-card glass-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h3 class="feature-title">Unique Skript Plugins</h3>
-            <p class="feature-desc">Special features like custom items, abilities, and events.</p>
-          </div>
-          <div class="feature-card glass-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3 class="feature-title">Community Focused</h3>
-            <p class="feature-desc">Friendly environment with teamwork, trading, and community projects.</p>
-          </div>
-          <div class="feature-card glass-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
-            </div>
-            <h3 class="feature-title">Player Tools &amp; Utilities</h3>
-            <p class="feature-desc">Custom commands to make gameplay smoother and more fun.</p>
-          </div>
-          <div class="feature-card glass-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-            </div>
-            <h3 class="feature-title">Regular Updates</h3>
-            <p class="feature-desc">New features and plugins added continuously to keep the server fresh.</p>
-          </div>
-          <div class="feature-card glass-card">
-            <div class="feature-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-            </div>
-            <h3 class="feature-title">Safe &amp; Stable</h3>
-            <p class="feature-desc">Optimized Skript setup for smooth performance and minimal lag.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-      <div class="section-inner">
-        <div class="section-header">
-          <h2 class="section-title">About <span class="text-blue">LancSMP</span></h2>
-          <p class="section-desc">Everything you need to know</p>
-        </div>
-        <div class="about-grid">
-          <div class="about-card glass-card">
-            <div class="about-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-            </div>
-            <h3 class="feature-title">Server</h3>
-            <p class="feature-desc">Powerful hardware, fast internet, and a Skript-powered backend delivering a smooth, lag-free experience for everyone.</p>
-          </div>
-          <div class="about-card glass-card">
-            <div class="about-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>
-            </div>
-            <h3 class="feature-title">Rules</h3>
-            <p class="feature-desc">A fair, respectful community. No griefing, no cheats, no spam — full rules available on our Discord server.</p>
-          </div>
-          <div class="about-card glass-card">
-            <div class="about-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
-            </div>
-            <h3 class="feature-title">Status</h3>
-            <p class="feature-desc">The server is online and stable. Jump in anytime at <strong>play.lancsmp.ru</strong> on Java or Bedrock edition.</p>
-          </div>
-          <div class="about-card glass-card">
-            <div class="about-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"/><path d="m18 15 4-4"/><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"/></svg>
-            </div>
-            <h3 class="feature-title">Tools</h3>
-            <p class="feature-desc">Custom commands and player utilities designed to streamline your gameplay and make every session more fun.</p>
-          </div>
-          <div class="about-card glass-card">
-            <div class="about-icon-box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>
-            </div>
-            <h3 class="feature-title">Map</h3>
-            <p class="feature-desc">Explore a vast world filled with player-made builds across multiple dimensions. More exploration tools coming soon.</p>
-          </div>
-          <div class="about-card about-card-full glass-card">
-            <div class="about-rules-header">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>
-              <h3 class="feature-title">Server Rules</h3>
-            </div>
-            <div class="rules-grid">
-              <div class="rule-item"><span class="rule-num text-blue">1.</span> Be respectful and kind to everyone</div>
-              <div class="rule-item"><span class="rule-num text-blue">2.</span> No cheats, hacks, or exploits</div>
-              <div class="rule-item"><span class="rule-num text-blue">3.</span> No spamming or advertising</div>
-              <div class="rule-item"><span class="rule-num text-blue">4.</span> No toxic behavior or harassment</div>
-              <div class="rule-item"><span class="rule-num text-blue">5.</span> Keep the community friendly and fun</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Join Section -->
-    <section id="join" class="section">
-      <div class="section-inner section-inner-narrow">
-        <div class="section-header">
-          <h2 class="section-title">How to <span class="text-blue">Join</span></h2>
-          <p class="section-desc">Get started in 4 simple steps</p>
-        </div>
-        <div class="join-grid">
-          <div class="join-card glass-card">
-            <div class="join-num">1</div>
-            <div class="join-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
-            </div>
-            <h3 class="feature-title">Get Minecraft</h3>
-            <p class="feature-desc">You'll need official Minecraft Java edition or Bedrock edition.</p>
-          </div>
-          <div class="join-card glass-card">
-            <div class="join-num">2</div>
-            <div class="join-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-            </div>
-            <h3 class="feature-title">Join Discord</h3>
-            <p class="feature-desc">You can join discord here to stay connected with the community.</p>
-            <a href="https://discord.lancsmp.ru/" target="_blank" rel="noopener noreferrer" class="join-link">
-              Join Discord
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-            </a>
-          </div>
-          <div class="join-card glass-card">
-            <div class="join-num">3</div>
-            <div class="join-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
-            </div>
-            <h3 class="feature-title">Join the Server</h3>
-            <p class="feature-desc">Add the server using the IP below in Minecraft.</p>
-            <button class="ip-copy-btn" id="copyIpBtn" data-ip="play.lancsmp.ru">
-              <span id="ipText">play.lancsmp.ru</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
-          </div>
-          <div class="join-card glass-card">
-            <div class="join-num">4</div>
-            <div class="join-icon-wrap">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-            </div>
-            <h3 class="feature-title">Any Questions?</h3>
-            <p class="feature-desc">That's it! Check our FAQ if you need any help getting started.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section">
-      <div class="section-inner section-inner-faq">
-        <div class="section-header">
-          <h2 class="section-title">Frequently Asked <span class="text-blue">Questions</span></h2>
-          <p class="section-desc">Got questions? We've got answers</p>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item glass-card">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-question">What versions of Minecraft are supported?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>We support the latest version of Minecraft Java Edition as well as Bedrock Edition. You can connect using the IP <strong>play.lancsmp.ru</strong>.</p>
-            </div>
-          </div>
-          <div class="faq-item glass-card">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-question">Is the server pay-to-win?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Absolutely not! Our core principle is to provide a fair, balanced experience for all players. We don't sell power-ups, advantages, or anything that breaks game balance.</p>
-            </div>
-          </div>
-          <div class="faq-item glass-card">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-question">What is Skript?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Skript is a plugin that lets you create custom Minecraft features using simple scripts. It powers many of our server's unique mechanics, and in the future you'll even be able to use it to create your own worlds and minigames!</p>
-            </div>
-          </div>
-          <div class="faq-item glass-card">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-question">How do I report a player or issue?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Join our Discord server and use the support channels to report any issues or rule-breaking behavior. Our staff team will review and handle it promptly.</p>
-            </div>
-          </div>
-          <div class="faq-item glass-card">
-            <button class="faq-btn" aria-expanded="false">
-              <span class="faq-question">Can I create my own world or minigame?</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="faq-answer">
-              <p>Yes! This is one of our upcoming features. Players will soon be able to create their own worlds and build custom minigames using Skript, playing together with friends in their own unique spaces.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
+      </section>
+    </main>
+  </noscript>
 
   <!-- Footer -->
   <footer class="footer">
-      <div class="footer-inner glass-card">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <img src="https://public.lancsmp.ru/images/lx.png" alt="LANVEX" class="footer-logo" width="40" height="40" loading="lazy" decoding="async">
-            <div>
-              <p class="footer-name">LANVEX</p>
-              <p class="footer-tagline">Community Minecraft Server</p>
-            </div>
-          </div>
-          <div class="footer-links">
-            <a href="mailto:golovanov.dmitrii@outlook.com" class="footer-link">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              Owner's email
-            </a>
+    <div class="footer-inner glass-card">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="https://public.lancsmp.ru/images/lx.png" alt="" class="footer-logo" data-footer-logo width="40" height="40" loading="lazy" decoding="async">
+          <div>
+            <p class="footer-name" data-footer-name>LANVEX</p>
+            <p class="footer-tagline" data-footer-tagline>Community Minecraft Server</p>
           </div>
         </div>
-        <div class="footer-bottom">
-          <div class="server-status" id="heroStatus" role="status" aria-live="polite">
-            <span class="server-status-dot" id="heroStatusDot"></span>
-            <span class="server-status-text" id="heroStatusText">Checking server status...</span>
-          </div>
-          <p>&copy; <span id="copyrightYear">2026</span> Lancasters Studios &amp; SMP. All Rights Reserved.</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link" data-owner-email>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Owner's email
+          </a>
         </div>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <div class="server-status" id="heroStatus" role="status" aria-live="polite">
+          <span class="server-status-dot" id="heroStatusDot"></span>
+          <span class="server-status-text" id="heroStatusText">Checking server status...</span>
+        </div>
+        <p data-copyright>&copy; 2026 Lancasters Studios &amp; SMP. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-  <script src="public/js/core/api.js"></script>
   <script src="public/js/core/utils.js"></script>
   <script src="public/js/core/icons.js"></script>
   <script src="public/js/core/markdown.js"></script>
+  <script src="public/js/core/config.js"></script>
+  <script src="public/js/core/sections.js"></script>
+  <script src="public/js/core/config-loader.js"></script>
   <script src="public/js/components/navbar.js"></script>
   <script src="public/js/core/ui.js"></script>
-  <script src="public/js/core/config-loader.js"></script>
   <script src="public/js/pages/home.js"></script>
   <script>
     (function() {
       var bar = document.getElementById('scrollProgress');
       if (!bar) return;
       var done = false;
-
       var resources = [];
       Array.prototype.forEach.call(document.scripts, function(s) { if (s.src) resources.push(s); });
       Array.prototype.forEach.call(document.querySelectorAll('link[rel="stylesheet"]'), function(l) { resources.push(l); });
       Array.prototype.forEach.call(document.images, function(i) { resources.push(i); });
       var total = resources.length;
-
       var timer = setInterval(function() {
         if (done) return;
         var loadedCount = 0;
         try {
-          loadedCount = performance.getEntriesByType('resource')
-            .filter(function(e) { return e.responseEnd > 0; }).length;
+          loadedCount = performance.getEntriesByType('resource').filter(function(e) { return e.responseEnd > 0; }).length;
         } catch (e) { loadedCount = total; }
         var pct = total > 0 ? Math.min(0.9, loadedCount / total) : 0.6;
         bar.style.width = (pct * 100).toFixed(2) + '%';
       }, 200);
-
       function finish() {
         if (done) return;
         done = true;
@@ -451,25 +202,6 @@
       }
       window.addEventListener('load', finish);
       setTimeout(finish, 5000);
-    })();
-    (function() {
-      var yearEl = document.getElementById('copyrightYear');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-      var btn = document.getElementById('scrollTopBtn');
-      if (!btn) return;
-      var ticking = false;
-      function onScroll() {
-        if (!ticking) {
-          requestAnimationFrame(function() {
-            if (window.scrollY > 400) btn.classList.add('visible');
-            else btn.classList.remove('visible');
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }
-      btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-      window.addEventListener('scroll', onScroll, { passive: true });
     })();
   </script>
 </body>
