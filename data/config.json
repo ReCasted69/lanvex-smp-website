@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Lancasters SMP — Home",
+    "title": "LANVEX SMP — Home",
     "name": "LANVEX",
     "favicon": "https://public.lancsmp.ru/images/lx.png",
     "ogImage": "https://public.lancsmp.ru/images/lanvex_smp%2Bbg.png",
@@ -11,14 +11,14 @@
       "<gradient:blue:gold>100% Fair — No Pay-to-Win<reset>",
       "<gradient:red:purple>Friendly Community • Regular Updates<reset>"
     ],
-    "bodyText1": "Lancasters SMP (often referred to as LancSMP) is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.",
-    "bodyText2": "One of the unique parts of LancSMP is its heavy use of the Skript language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <gold>Skript<reset> .",
+    "bodyText1": "LANVEX SMP is a community-focused Minecraft server built to fight against pay-to-win gameplay. The server runs on powerful hardware and fast internet.",
+    "bodyText2": "One of the unique parts of LANVEX SMP is its heavy use of the Skript language, which powers many of the server's custom features and systems. In the future, players will even be able to create their own worlds, play with friends, and build custom minigames using <gold>Skript<reset> .",
     "serverIp": "mc.lancsmp.ru",
     "discordUrl": "https://discord.lancsmp.ru/",
     "supportUrl": "https://ko-fi.com/lancasters_studios",
     "ownerEmail": "golovanov.dmitrii@outlook.com",
     "copyright": "2026 Lancasters Studios & SMP. All Rights Reserved. NOT ASSOCIATED WITH MOJANG OR MICROSOFT",
-    "logoSm": "https://public.lancsmp.ru/images/lx.png",
+    "logoSm": "https://public.lancsmp.ru/images/lx+bg.png",
     "logoBig": "https://public.lancsmp.ru/images/lanvex_smp_logo.png",
     "bgImage": "https://public.lancsmp.ru/images/BG_4.png",
     "bgVersion": 2
