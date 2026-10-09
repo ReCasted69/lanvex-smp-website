@@ -983,3 +983,72 @@ html.motion-off *, html.motion-off *::before, html.motion-off *::after {
   scroll-behavior: auto !important;
 }
 html.motion-off .reveal-in { opacity: 1; transform: none; }
+
+/* ---------- 404 Page ---------- */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 1.5rem 4rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.error-container {
+  text-align: center;
+  width: 100%;
+}
+.error-code {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(7rem, 22vw, 14rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 14px 45px rgba(58, 111, 255, 0.35));
+  margin-bottom: 0.25rem;
+  animation: errorFloat 4s ease-in-out infinite;
+}
+@keyframes errorFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.error-glass-card {
+  background: rgba(20, 24, 38, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-card);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 0 80px rgba(58, 111, 255, 0.1);
+  max-width: 34rem;
+  margin: 0 auto;
+}
+.error-glass-card h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.error-glass-card p {
+  color: var(--muted);
+  font-size: 0.96875rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
+}
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .error-glass-card { padding: 1.75rem 1.25rem; }
+  .error-actions { flex-direction: column; align-items: stretch; }
+}
