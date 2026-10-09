@@ -107,7 +107,6 @@
       "subtitle": "Built to be fair, fast, and fun",
       "items": [
         { "value": 100, "suffix": "%", "label": "Anti Pay-to-Win" },
-        { "value": 100, "suffix": "%", "label": "Anti Pay-to-Win" },
         { "value": 10000, "suffix": "+", "label": "Lines Of  Code" }
       ]
     },
