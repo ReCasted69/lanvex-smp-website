@@ -15,7 +15,7 @@
     },
     "discordUrl": "https://discord.lancsmp.ru/",
     "supportUrl": "https://ko-fi.com/lancasters_studios",
-    "ownerEmail": "golovanov.dmitrii@outlook.com",
+    "ownerEmail": "owner@lancsmp.ru",
     "copyright": "{year} LANVEX Studios & SMP. All Rights Reserved. Not associated with Mojang or Microsoft."
   },
 
@@ -55,7 +55,7 @@
     "endpoint": "https://api.mcstatus.io/v2/status/java/{ip}",
     "ip": "mc.lancsmp.ru",
     "refreshSeconds": 60,
-    "showPlayers": true,
+    "showPlayers": false,
     "showVersion": true
   },
 
@@ -120,7 +120,7 @@
       "items": [
         { "icon": "server", "title": "Server", "desc": "Powerful hardware, fast internet, and a Skript-powered backend delivering a smooth, lag-free experience for everyone." },
         { "icon": "scroll", "title": "Rules", "desc": "A fair, respectful community. No griefing, no cheats, no spam — full rules available on our Discord server." },
-        { "icon": "activity", "title": "Status", "desc": "The server is online and stable. Jump in anytime at <strong>play.lancsmp.ru</strong> on Java or Bedrock edition." },
+        { "icon": "activity", "title": "Status", "desc": "The server is online and stable. Jump in anytime at mc.lancsmp.ru on Java or Bedrock edition." },
         { "icon": "hammer", "title": "Tools", "desc": "Custom commands and player utilities designed to streamline your gameplay and make every session more fun." },
         { "icon": "map", "title": "Map", "desc": "Explore a vast world filled with player-made builds across multiple dimensions. More exploration tools coming soon." }
       ],
